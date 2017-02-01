@@ -1,0 +1,5 @@
+
+  <li class="<%= comment.name %>"><%= comment.name %>
+    <%= comment.description %>
+    <%= link_to "x", comment, method: :delete, remote: true %>
+  </li>

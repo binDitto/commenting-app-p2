@@ -1,0 +1,20 @@
+<h1>Yolo</h1>
+
+
+<%= form_for(Comment.new, remote: true, html: { class: "erase" }) do |c| %>
+ <%= c.label :name %> <br/>
+ <%= c.text_field :name %>
+ <br/>
+ <%= c.label :description %>
+ <br/>
+ <%= c.text_field :description %>
+ <br/>
+ <%= c.submit "Post" %>
+
+
+<% end %>
+
+
+  <ul class="comments">
+    <%= render @comments %>
+  </ul>

@@ -1,0 +1,8 @@
+$('ul.comments').append("<%= escape_javascript(render @comment) %>");
+
+$('li.<%= @comment.name %>')
+.hide()
+.fadeIn('slow')
+;
+
+$('.erase').find('input[type=text], textarea').val('');
