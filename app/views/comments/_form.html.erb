@@ -11,13 +11,13 @@
         </ul>
       </div>
     <% end %>
-    
+
   <div class="form-group">
-    <%= c.text_field :name, placeholder: "Enter Name", class: "form-control left" %>
+    <%= c.text_field :name, placeholder: "Name > 3 Char", class: "form-control left" %>
   </div>
 
   <div class="form-group">
-    <%= c.text_field :description, placeholder: "Enter Comment", class: "form-control right", size: 32 %>
+    <%= c.text_field :description, placeholder: "Comment > 5 Char ", class: "form-control right", size: 32 %>
   </div>
 
     <%= c.submit 'Post', class: "btn btn-success btn-edit" %>
