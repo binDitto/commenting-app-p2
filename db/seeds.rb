@@ -19,6 +19,22 @@ Comment.create!([
   {
     name: "Joel Ackman",
     description: "Whaddayawant?"
+  },
+  {
+    name: "Joeel Ackman",
+    description: "Whadedayawant?"
+  },
+  {
+    name: "Joewl Ackman",
+    description: "Whadtdayawadant?"
+  },
+  {
+    name: "Joeabl Ackaweman",
+    description: "Whaddayaasdwant?"
+  },
+  {
+    name: "Joebwerl Ackmnanaan",
+    description: "Whaddbabayawant?"
   }])
 
   puts "Created #{Comment.count} comments!"

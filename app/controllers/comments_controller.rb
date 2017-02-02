@@ -3,10 +3,10 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: :destroy
 
   def index
-    @comments = Comment.all.reverse
+    @comments = Comment.all.order('created_at DESC')
 
     if Comment.count > 6
-      Comment.first.destroy
+      Comment.order('created_at DESC').limit(1).offset(6).destroy_all
     end
 
     respond_to do |format|
