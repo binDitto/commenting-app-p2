@@ -1,52 +1,34 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [ :edit, :update, :show, :destroy ]
+
+  before_action :set_comment, only: :destroy
 
   def index
-    @comments = Comment.all
+    @comments = Comment.all.reverse
 
-
-  end
-
-  def new
-    @comment = Comment.new()
-  end
-
-  def create
-    @comment = Comment.new(comment_params)
-
-    if @comment.save
-      flash[:success] = "Thanks for commenting #{@comment.name}"
+    if Comment.count > 6
+      Comment.first.destroy
     end
 
     respond_to do |format|
       format.html
-      format.json
       format.js
     end
-  end
-
-  def show
 
   end
 
-  def edit
+  def create
+    @comment = Comment.create(set_params)
 
-  end
-
-  def update
+    respond_to do |format|
+      format.js
+    end
 
   end
 
   def destroy
     @comment.destroy
 
-    if @comment.destroy
-      flash[:danger] = "Comment deleted!"
-    end
-
     respond_to do |format|
-      format.html
-      format.json
       format.js
     end
 
@@ -54,11 +36,12 @@ class CommentsController < ApplicationController
 
   private
 
-    def comment_params
-      params.require(:comment).permit(:name, :description)
-    end
-
     def set_comment
       @comment = Comment.find(params[:id])
     end
+
+    def set_params
+      params.require(:comment).permit(:name, :description)
+    end
+
 end

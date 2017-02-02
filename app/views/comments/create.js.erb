@@ -1,8 +1,7 @@
-$('ul.comments').append("<%= escape_javascript(render @comment) %>");
+$('ul.add').prepend('<%= j render @comment %>');
+$('li.<%= @comment.name %>').hide().fadeIn(1000);
 
-$('li.<%= @comment.name %>')
-.hide()
-.fadeIn('slow')
-;
+$('form.erase').find('input[type=text], textarea').fadeOut(500).fadeIn(500).val('');
 
-$('.erase').find('input[type=text], textarea').val('');
+
+$('li:gt(5):last').fadeOut(500);

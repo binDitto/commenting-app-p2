@@ -1,0 +1,25 @@
+<%= form_for(Comment.new, remote: true, html: { class: "form-inline erase" }) do |c| %>
+
+    <% if Comment.new.errors.any? %>
+      <div class="alert alert-danger">
+        <ul>
+          <% Comment.new.errors.full_messages.each do |msg| %>
+            <li>
+            <%= msg %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+  <div class="form-group">
+    <%= c.text_field :name, placeholder: "Enter Name", class: "form-control left" %>
+  </div>
+
+  <div class="form-group">
+    <%= c.text_field :description, placeholder: "Enter Comment", class: "form-control right", size: 32 %>
+  </div>
+
+    <%= c.submit 'Post', class: "btn btn-success btn-edit" %>
+
+<% end %>

@@ -1,0 +1,140 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+body {
+  background-color: gray;
+}
+
+.container{
+  margin: 20px auto;
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+.add {
+  overflow: hidden;
+
+  padding: 10px;
+}
+.space {
+  width: 400px;
+  position: relative;
+  margin: 5px auto;
+  border-radius: 0px !important;
+  float: left;
+  clear: left;
+  border-left: 5px solid red;
+  span.label-danger {
+    float: left;
+  }
+  .smaller {
+    clear: both;
+    margin-top: 10px;
+    width: 100%;
+    border-top: 1px solid lightgray;
+    font-size: 10px;
+  }
+  .badge {
+    float: left;
+    border-radius: 0px;
+  }
+  .fa-angle-down {
+    float: right;
+  }
+  p {
+    padding: 10px;
+    clear:both;
+    float: left;
+  }
+  .delbtn {
+    border: 1px solid lightgray;
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    clear: both;
+    display: none;
+    background-color: white;
+    box-shadow: 1px 1px 1px #888888;
+  }
+  .fa-angle-down {
+    display: block;
+  }
+}
+
+.space:nth-of-type(2n) {
+  border-left: 0px;
+  border-right: 5px solid green;
+  position: relative;
+  float: right;
+  clear: right;
+  span.label-danger {
+    float: right;
+  }
+  .delbtn {
+    border: 1px solid lightgray;
+    padding: 5px;
+    position: absolute;
+    right: auto;
+    left: 15px;
+    top: 25px;
+    clear: both;
+    display: none;
+    background-color: white;
+    box-shadow: 1px 1px 1px #888888;
+  }
+  .smaller {
+    text-align: right;
+  }
+  .badge {
+    float: right;
+    border-radius: 0px;
+  }
+  .fa-angle-down {
+    float: left;
+  }
+  p {
+    clear: both;
+    float: right;
+  }
+}
+.erase {
+
+  padding: 5px;
+  margin: 0px auto;
+  .left{
+    height: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin: 0px;
+  }
+  .right{
+    height: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin: 0px;
+    margin-left: -5px;
+  }
+  .btn-edit {
+    height: 50px;
+    width: 80px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin: 0px;
+    margin-left: -5px;
+  }
+}
+
+.alert {
+  display: none;
+}

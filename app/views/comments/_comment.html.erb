@@ -1,5 +1,7 @@
-
-  <li class="<%= comment.name %>"><%= comment.name %>
-    <%= comment.description %>
-    <%= link_to "x", comment, method: :delete, remote: true %>
-  </li>
+<li class="list-group-item <%= comment.name %> space">
+  <span class="badge"><%= comment.name %> said:</span>
+  <i class="fa fa-angle-down clik"></i>
+  <%= link_to '<i class="fa fa-trash"></i>'.html_safe, comment, method: :delete, remote: true, class: "delbtn" %>
+  <p><%= comment.description %></p>
+  <div class="smaller"><%= time_ago_in_words(comment.created_at) %> ago</div>
+</li>

@@ -1,0 +1,7 @@
+$('li').each(function(i){
+  $(this).delay(100 * i).fadeIn(500);
+});
+
+<% if Comment.count > 7 %>
+  $('li:last').fadeOut(500);
+<% end %>
