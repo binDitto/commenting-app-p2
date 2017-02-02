@@ -1,7 +1,4 @@
 $('ul.add').prepend('<%= j render @comment %>');
 $('li.<%= @comment.name %>').hide().fadeIn(1000);
-
+$('li:gt(5):last').remove();
 $('form.erase').find('input[type=text], textarea').fadeOut(500).fadeIn(500).val('');
-
-
-$('li:gt(5):last').fadeOut(500);
